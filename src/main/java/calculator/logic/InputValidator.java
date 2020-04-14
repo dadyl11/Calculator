@@ -1,4 +1,4 @@
-package logic;
+package calculator.logic;
 
 import java.util.List;
 import java.util.regex.Pattern;
@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
 public class InputValidator {
 
   public void validateInput(String instruction) {
+    //moze lepiej dac tu juz splitowane
     String[] splittedInstruction = instruction.split("\\s+");
     if (!(splittedInstruction.length == 2)) {
       throw new IllegalArgumentException(

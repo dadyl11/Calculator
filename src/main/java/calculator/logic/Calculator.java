@@ -1,10 +1,8 @@
-package logic;
+package calculator.logic;
 
 import java.util.List;
 
 public class Calculator {
-
-  private int currentNumber;
 
   public int calculateResult(List<String[]> instructions){
     int currentNumber = getStartNumber(instructions);
@@ -21,7 +19,6 @@ public class Calculator {
     return Integer.parseInt(startNumberText);
   }
   private int executeInstruction(String[] instruction, int currentNumber){
-    this.currentNumber = currentNumber;
     int instructionNumber = Integer.parseInt(instruction[1]);
     switch (instruction[0]){
       case "add":

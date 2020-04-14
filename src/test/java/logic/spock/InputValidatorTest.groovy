@@ -1,4 +1,4 @@
-package logic
+package logic.spock
 
 import spock.lang.Specification
 
