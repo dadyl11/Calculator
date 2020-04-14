@@ -1,0 +1,3 @@
+subtract 5
+add 5
+apply 0

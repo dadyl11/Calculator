@@ -1,0 +1,6 @@
+add 50
+subtract 11
+multiply 3
+add 128
+multiply 4
+apply 10

@@ -1,4 +1,4 @@
-package calculator.logic;
+package com.calculator.logic;
 
 import java.util.List;
 import java.util.regex.Pattern;
@@ -6,7 +6,6 @@ import java.util.regex.Pattern;
 public class InputValidator {
 
   public void validateInput(String instruction) {
-    //moze lepiej dac tu juz splitowane
     String[] splittedInstruction = instruction.split("\\s+");
     if (!(splittedInstruction.length == 2)) {
       throw new IllegalArgumentException(
@@ -15,8 +14,9 @@ public class InputValidator {
     if (!isNumeric(splittedInstruction[1])) {
       throw new IllegalArgumentException("The second part of the instruction should be a number.");
     }
-    if (!isValidInstruction(splittedInstruction[0])){
-      throw new IllegalArgumentException("The first part of the instruction needs to be one of the arithmetic operations: add, divide, subtract, multiply.");
+    if (!isValidInstruction(splittedInstruction[0])) {
+      throw new IllegalArgumentException(
+          "The first part of the instruction needs to be one of the arithmetic operations: add, divide, subtract, multiply.");
     }
   }
 
@@ -38,8 +38,8 @@ public class InputValidator {
 
   private Pattern instructionPattern = Pattern.compile("\\badd|divide|subtract|multiply|apply\\b", Pattern.CASE_INSENSITIVE);
 
-  private boolean isValidInstruction(String instructionText){
-    if (instructionText == null){
+  private boolean isValidInstruction(String instructionText) {
+    if (instructionText == null) {
       return false;
     }
     return instructionPattern.matcher(instructionText).matches();

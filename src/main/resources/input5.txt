@@ -1,0 +1,3 @@
+add 9
+divide 5
+apply 2

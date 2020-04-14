@@ -1,0 +1,3 @@
+add 12
+add 5
+apply 7

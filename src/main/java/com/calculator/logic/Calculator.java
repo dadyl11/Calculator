@@ -1,26 +1,27 @@
-package calculator.logic;
+package com.calculator.logic;
 
 import java.util.List;
 
 public class Calculator {
 
-  public int calculateResult(List<String[]> instructions){
+  public int calculateResult(List<String[]> instructions) {
     int currentNumber = getStartNumber(instructions);
     int result = 0;
-    for (int i = 0; i < instructions.size()-1; i++){
+    for (int i = 0; i < instructions.size() - 1; i++) {
       result = executeInstruction(instructions.get(i), currentNumber);
       currentNumber = result;
     }
     return result;
   }
 
-  private int getStartNumber(List<String[]> instructions){
-    String startNumberText = instructions.get(instructions.size()-1)[1];
+  private int getStartNumber(List<String[]> instructions) {
+    String startNumberText = instructions.get(instructions.size() - 1)[1];
     return Integer.parseInt(startNumberText);
   }
-  private int executeInstruction(String[] instruction, int currentNumber){
+
+  private int executeInstruction(String[] instruction, int currentNumber) {
     int instructionNumber = Integer.parseInt(instruction[1]);
-    switch (instruction[0]){
+    switch (instruction[0]) {
       case "add":
         currentNumber += instructionNumber;
         break;
