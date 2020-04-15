@@ -3,8 +3,6 @@ package com.calculator;
 import com.calculator.logic.Calculator;
 import com.calculator.logic.InputReader;
 import com.calculator.logic.InputValidator;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
